@@ -1,13 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/reset.css">
+    <link rel="stylesheet" href="./src/style/global.css">
+    <link rel="stylesheet" href="./src/style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arta</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+</head>
+<body>
+    <div id="app" class="appWrap">
+        <a class="closingBannerWrap" href="#">
+            <img src="./src/assets/cross.svg" alt="cross">
+        </a>
+        <div class="appContainer">
+            <h1 class="appContainer__title" id="appHeaderTitle"></h1>
+            <div class="cardListWrap">
+                <div class="creationCardWrap artaCard">
+                    <p class="creationCardWrap__title artaCard__title" id="creationCardTitle"></p>
+                </div>
+                <div class="stylesCardWrap artaCard">
+                    <p class="stylesCardWrap__title artaCard__title" id="styleCardTitle"></p>
+                </div>
+                <div class="avatarsCardWrap artaCard">
+                    <p class="avatarsCardWrap__title artaCard__title" id="avatarCardTitle"></p>
+                </div>
+            </div>
+            <div class="yearlyAccessWrap baseAccessWrap" id="yearlyAccessElement" style="background: #504F51; border: 1px solid #fff" onclick={handleAccess(1)}>
+                <p class="yearlyAccessWrap__refTitle" id="bestOfferTitle"></p>
+                <div class="yearlyAccessContainer">
+                    <div class="yearlyAccessDescriptionWrap">
+                        <h4 class="yearlyAccessDescriptionWrap__title" id="yearlyAccessTitle"></h4>
+                        <p class="yearlyAccessDescriptionWrap__subtitle" id="yearPriceTitle"></p>
+                    </div>
+                    <p class="yearlyAccessWrap__pricingTitle" id="yearlyAccessWeekPriceTitle"></p>
+                </div>
+            </div>
+            <div class="weeklyAccessWrap baseAccessWrap" id="weeklyAccessElement" onclick={handleAccess(2)}>
+                <div class="weeklyAccessContainer">
+                    <h4 class="weeklyAccessWrap__title" id="weeklyAccessTitle"></h4>
+                    <p class="weeklyAccessWrap__pricingTitle" id="directWeekPriceTitle"></p>
+                </div>
+            </div>
+            <a class="actionWrap">
+                <button 
+                    class="actionContainer" 
+                    onclick={linkToCorrectHost()}>
+                    <p id="actionElementTitle"></p>
+                </button>
+            </a>
+            <footer class="linksWrap">
+                <nav class="linksContainer">
+                    <a class="linksContainer__title" href="#" id="termUseTitle"></a>
+                    <a class="linksContainer__title" href="#" id="privacyPolicyTitle"></a>
+                    <a class="linksContainer__title" href="#" id="restoreTitle"></a>
+                </nav>
+            </footer>
+        </div>
+        <script src="/src/main.ts"></script>
+        <script type="module" src="/src/lang.js"></script>
+    </div>
+</body>
 </html>

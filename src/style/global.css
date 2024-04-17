@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+	font-family: -apple-system, system-ui, "Roboto", Verdana, Tahoma, sans-serif;
+}
+
+:root {
+	--color-pure-dark: #000;
+	--color-cetacean-blue: #070b33;
+	--color-raisin-black: #242029;
+	--color-dark-gunmetal: #2e3111;
+	--color-light-pale: #ffffff80;
+	--color-pure-light: #fff;
+}
+
+.artaCard {
+	padding: 0 8px 10px 8px;
+	height: 140px;
+	width: 106px;
+	border-radius: 10px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.artaCard__title {
+	max-width: 90;
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+	color: var(--color-pure-light);
+}
+
+.baseAccessWrap {
+	background: var(--color-raisin-black);
+	border: 1px solid transparent;
+	border-radius: 30px;
+}

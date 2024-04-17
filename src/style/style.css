@@ -1,0 +1,174 @@
+.appWrap {
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	background: url("/src/assets/backgroundElement.png") no-repeat center center;
+	background-size: cover;
+}
+
+.closingBannerWrap {
+	position: absolute;
+	top: 6%;
+	left: 24px;
+}
+
+.appContainer {
+	margin-inline: auto;
+	max-width: 342px;
+	width: 100%;
+}
+
+.appContainer__title {
+	margin-inline: auto;
+	padding-bottom: 40px;
+	max-width: 290px;
+	font-size: 4.2rem;
+	line-height: 4.6rem;
+	font-weight: 860;
+	color: var(--color-pure-light);
+	text-align: center;
+}
+
+.cardListWrap {
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+}
+
+@media (max-width: 376px) {
+	.cardListWrap {
+		padding-bottom: 40px;
+	}
+}
+
+.creationCardWrap {
+	max-width: 106px;
+	width: 100%;
+	max-height: 140px;
+	background: url("/src/assets/firstCard.webp") center center no-repeat;
+}
+
+.stylesCardWrap {
+	background: url("/src/assets/secondCard.webp") center center no-repeat;
+}
+
+.stylesCardWrap__title {
+	max-width: min-content;
+}
+
+.avatarsCardWrap {
+	background: url("/src/assets/thirdCard.webp") center center no-repeat;
+}
+
+.yearlyAccessWrap,
+.weeklyAccessWrap {
+	padding: 8px 0 8px 24px;
+}
+
+.yearlyAccessWrap {
+	margin-bottom: 8px;
+
+	position: relative;
+	color: var(--color-pure-light);
+}
+
+.yearlyAccessWrap__refTitle {
+	position: absolute;
+	top: -12px;
+	right: 24px;
+	padding: 2px 22px;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: var(--color-dark-gunmetal);
+	text-transform: uppercase;
+	text-align: center;
+	background: var(--color-pure-light);
+	border-radius: 30px;
+}
+
+.yearlyAccessContainer,
+.weeklyAccessContainer {
+	max-width: 254px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.yearlyAccessDescriptionWrap__title,
+.weeklyAccessWrap__title {
+	font-size: 1.6rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.yearlyAccessDescriptionWrap__title {
+	padding-bottom: 4px;
+}
+
+.yearlyAccessDescriptionWrap__subtitle,
+.yearlyAccessWrap__pricingTitle,
+.weeklyAccessWrap__pricingTitle {
+	font-size: 1.6rem;
+	line-height: 1.9rem;
+}
+
+.yearlyAccessWrap__pricingTitle,
+.weeklyAccessWrap__pricingTitle {
+	max-width: 64px;
+}
+
+.weeklyAccessWrap {
+	margin-bottom: 16px;
+	color: var(--color-pure-light);
+}
+
+@media (max-width: 376px) {
+	.weeklyAccessWrap {
+		margin-bottom: 8px;
+	}
+}
+
+.actionContainer {
+	margin-bottom: 44px;
+	padding: 16px 0;
+	width: 100%;
+	background: var(--color-pure-light);
+	font-size: 2rem;
+	color: var(--color-cetacean-blue);
+	border-radius: 30px;
+}
+
+@media (max-width: 376px) {
+	.actionContainer {
+		margin-bottom: 28px;
+	}
+}
+
+.linksWrap {
+	margin-inline: auto;
+	padding-bottom: 30px;
+}
+
+@media (max-width: 376px) {
+	.linksWrap {
+		padding-bottom: 12px;
+	}
+}
+
+.linksContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.linksContainer__title {
+	font-size: 1.2rem;
+	color: var(--color-light-pale);
+}

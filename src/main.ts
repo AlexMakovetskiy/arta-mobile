@@ -1,24 +1,28 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+type TResultAccess = string | null;
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const googleLink = "https://google.com";
+const appleLink = "https://apple.com";
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+let resultAccess: TResultAccess = null;
+
+function handleAccess(accessType: number) {
+	const yearlyAccessWrapElement = document.querySelector<HTMLDivElement>("#yearlyAccessElement");
+	const weeklyAccessWrapElement = document.querySelector<HTMLDivElement>("#weeklyAccessElement");
+
+	if (accessType === 1) {
+		if (yearlyAccessWrapElement && weeklyAccessWrapElement) {
+			yearlyAccessWrapElement.setAttribute("style", "background: #504F51; border: 1px solid #fff");
+			weeklyAccessWrapElement.setAttribute("style", "");
+		}
+	} else {
+		if (yearlyAccessWrapElement && weeklyAccessWrapElement) {
+			yearlyAccessWrapElement.setAttribute("style", "");
+			weeklyAccessWrapElement.setAttribute("style", "background: #504F51; border: 1px solid #fff");
+		}
+	}
+	return (resultAccess = accessType === 1 ? appleLink : googleLink);
+}
+
+function linkToCorrectHost() {
+	return window.open((resultAccess as string) ?? appleLink);
+}
